@@ -1,0 +1,249 @@
+/**
+ * Theme Name: myBackend
+ * Theme Version: 2
+ * Author: Bunlert Khongkaho (iBunlert)
+ * URL: http://ibunlert.com
+ * License: open source
+ * Start: Aug, 2015
+ */
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 12px;
+	color: #666666;
+	font-weight: 500;
+	line-height: 18px;
+	text-rendering: optimizeLegibility;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 500;
+}
+.bor {
+	border: 1px solid #000;
+}
+.container-fluid {
+	width: 98% !important;
+}
+
+#header {
+	width: 100% !important;
+	background: hsl(168, 100%, 28%);
+	color: #f5f5f5;
+	font-size: 18px;
+	font-weight: bolder;
+	margin: 0px; padding: 7px 20px;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+
+#loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 500;
+	background: hsla(0, 0%, 0%, 0.7);
+}
+#loader .massage {
+	font-size: 22px;
+	color: #fff;
+	position: relative;
+	top: 48%;
+	left: 47%;
+}
+
+/*------------------------------------------------------------------
+ *	Subnavbar
+ */
+.subnavbar {
+	margin-bottom: 1em;
+}
+
+.subnavbar-inner {
+	height: 60px;
+	background: #fff;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+.subnavbar .container-fluid > ul {
+	display: inline-block;
+
+	height: 80px;
+	padding: 0;
+	margin: 0;
+
+}
+
+.subnavbar .container-fluid > ul > li {
+	float: left;
+
+	min-width: 90px;
+	height: 60px;
+	padding: 0;
+	margin-left: -1px;
+
+	text-align: center;
+	list-style: none;
+
+	border-left: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+
+}
+.subnavbar .container-fluid > ul > li:hover {
+	background-color: #dbdbdb;
+}
+
+.subnavbar .container-fluid > ul > li > a {
+	display: block;
+
+	height: 100%;
+	padding: 0 15px;
+
+	font-size: 12px;
+	font-weight: bold;
+	color: #b2afaa;
+}
+
+.subnavbar .container-fluid > ul > li > a:hover {
+	color: #aaa;
+	text-decoration: none;
+}
+
+.subnavbar .container-fluid > ul > li > a > i {
+	display: inline-block;
+
+	width: 24px;
+	height: 24px;
+	margin-top: 11px;
+	margin-bottom: -3px;
+	font-size: 20px;
+}
+
+.subnavbar .container-fluid > ul > li > a > span {
+	display: block;
+
+}
+
+
+.subnavbar .container-fluid > ul > li.active > a {
+	background-color: #e0e0e0;
+	border-bottom:3px solid hsl(168, 100%, 28%);
+	color: #383838;
+}
+
+
+.subnavbar .dropdown .dropdown-menu a {
+	font-size: 12px;
+}
+
+
+.subnavbar .dropdown .dropdown-menu {
+    	text-align: left;
+
+		-webkit-border-top-left-radius: 0;
+		-webkit-border-top-right-radius: 0;
+		-moz-border-radius-topleft: 0;
+		-moz-border-radius-topright: 0;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+    }
+
+
+
+.subnavbar .dropdown-menu::before {
+	content: '';
+	display: inline-block;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid #CCC;
+	border-bottom-color: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	top: -7px;
+	left: 9px;
+}
+
+.subnavbar .dropdown-menu::after {
+	content: '';
+	display: inline-block;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid white;
+	position: absolute;
+	top: -6px;
+	left: 10px;
+}
+
+.dropdown .dropdown-menu {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.subnavbar .caret {
+	margin-top: -18px;
+	border-top-color: #888;
+	border-bottom-color: #888;
+}
+
+.subnavbar .dropdown.open .caret {
+	display: none;
+}
+
+/* on fixtop */
+.subnavbar-inner-fixed-top {
+	height: 30px;
+	background: #eee;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+.subnavbar .subnavbar-inner-fixed-top .container-fluid > ul {
+	display: inline-block;
+
+	height: 50px;
+	padding: 0;
+	margin: 0;
+
+}
+
+.subnavbar .subnavbar-inner-fixed-top .container-fluid > ul > li {
+	float: left;
+
+	min-width: 90px;
+	height: 30px;
+	padding: 0;
+	margin-left: -1px;
+
+	text-align: center;
+	list-style: none;
+
+	border-left: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+
+}
+
+
+/* ------------------------------------------------------------------
+ *	Bootstrap Editor
+ */
+.breadcrumb {
+	background: #fff;
+}

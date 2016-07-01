@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+
+    <title>myBackend V2 (Redesign)</title>
+  </head>
+  <body>
+    <div id="loader">
+      <div class="massage">
+        <i class="fa fa-refresh fa-spin"></i> กำลังโหลดข้อมูล
+      </div>
+    </div>
+    <div id="page">
+
+      <div id="header">
+        <div class="navbar container-fluid">
+          <h1>โปรแกรมอะไรซักอย่าง</h1>
+          <p style="color: #b7b7b7">ผลิตโดย นาย บุญเลิศ คงกะโฮ่</p>
+        </div>
+      </div>
+
+      <div class="subnavbar">
+        <div class="subnavbar-inner">
+          <div class="container-fluid">
+            <ul class="mainnav">
+              <li><a href=""><i class="fa fa-dashboard"></i><span>เมนูหลัก</span> </a> </li>
+              <li class="dropdown"><a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-lock"></i><span>Dropdown</span> <b class="caret"></b></a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            </ul>
+            <ul class="mainnav pull-right">
+              <li><a href=""><i class="fa fa-sign-out"></i><span>ออกจากระบบ</span> </a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-md-6">
+            <h1>ยินดีต้อนร้บ</h1>
+            <ol class="breadcrumb" style="margin-bottom: 5px;">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Library</a></li>
+              <li class="active">Data</li>
+            </ol>
+          </div>
+          <div class="col-md-6 text-right">
+            <button class="btn btn-success" onclick="alert.success('สำเร็จแล้วจร้า')"><i class="fa fa-check"></i></button>
+            <button class="btn btn-danger" onclick="alert.error('ผิดพลาดอีกและ')"><i class="fa fa-remove"></i></button>
+            <button class="btn btn-primary"><i class="fa fa-plus"></i> เพิ่มรายการ</button>
+          </div>
+        </div>
+
+        <div id="alert"></div>
+
+        <div class="row">
+          <div class="col-md-6">
+
+            <div class="card">
+              <div class="card-header">
+                <i class="fa fa-dashboard"></i> Dashboard
+              </div>
+              <div class="card-block">
+                ...
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                ...
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+
+            <div class="card">
+              <div class="card-header">
+                <i class="fa fa-dashboard"></i> Dashboard
+              </div>
+              <div class="card-block">
+                ...
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  $(window).load(function(){
+    loader.close();
+  });
+
+  $(function(){
+    //Hide Navbar on scrolldown
+    $(window).scroll(function() {
+      if($(this).scrollTop() > 98) {
+        $('.subnavbar i').hide();
+        $('.subnavbar').addClass('navbar-fixed-top');
+        $('.subnavbar div').removeClass('subnavbar-inner').addClass('subnavbar-inner-fixed-top');
+      }else{
+        $('.subnavbar i').show();
+        $('.subnavbar').removeClass('navbar-fixed-top');
+        $('.subnavbar div').removeClass('subnavbar-inner-fixed-top').addClass('subnavbar-inner');
+      }
+    });
+
+    //Mark Active menu
+    $('.mainnav li:first').addClass('active');
+  })
+</script>
